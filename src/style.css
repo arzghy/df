@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warna khusus Mita */
+  --color-pausRed-50: #fef2f2;
+  --color-pausRed-100: #fee2e2;
+  --color-pausRed-200: #fecaca;
+  --color-pausRed-400: #f87171;
+  --color-pausRed-600: #dc2626;
+  --color-pausRed-800: #991b1b;
+  --color-pausRed-900: #7f1d1d;
+
+  /* Animasi */
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-swim: swim 20s linear infinite;
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes swim {
+    0% { transform: translateX(-10vw); }
+    100% { transform: translateX(110vw); }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+}
+
+/* Custom styling untuk scrollbar yang estetik */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #fef2f2; }
+::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #991b1b; }
